@@ -5,10 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
-
+   <% @abbv.each do |key, value| %>
+     <% if key == :name %>
+       <h1><%= "#{@abbv[key]}: #{@team[key]}" %></h1>
+     <% else %>
+       <h2><%= "#{@abbv[key]}: #{@team[key]}" %></h2>
+     <% end %>
+   <% end  %>
  </body>
 </html>
-
-
